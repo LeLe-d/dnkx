@@ -1,0 +1,13 @@
+name: Sync Articles
+on:
+  push:
+    paths:
+      - 'docs/articles/**'
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Deploy to Server
+        run: |
+          scp -r docs/articles/ user@yourserver:/var/www/blog/articles/
