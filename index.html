@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技术博客 | 探索数字世界</title>
+    <style>
+        /* 基础样式 (网页2/6/8) */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --text-color: #333;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background: #f8f9fa;
+            color: var(--text-color);
+        }
+
+        /* 导航栏 (网页6/8) */
+        .navbar {
+            background: var(--primary-color);
+            padding: 1rem 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 90%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-brand {
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* 主内容区 (网页7/8) */
+        .container {
+            max-width: 1200px;
+            margin: 80px auto 0;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 2rem;
+        }
+
+        /* 文章卡片 (网页6/8) */
+        .article-card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .article-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .article-meta {
+            color: #666;
+            font-size: 0.9rem;
+            margin: 0.5rem 0;
+        }
+
+        /* 侧边栏 (网页6) */
+        .sidebar {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .author-card {
+            text-align: center;
+        }
+
+        .author-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        /* 响应式设计 (网页3/6) */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <a href="#" class="navbar-brand">Tech Explorer</a>
+        <div class="nav-links">
+            <a href="#" class="active">首页</a>
+            <a href="#">归档</a>
+            <a href="#">关于</a>
+            <a href="#">订阅</a>
+        </div>
+    </nav>
+
+    <!-- 主内容区 -->
+    <div class="container">
+        <!-- 文章列表 -->
+        <main>
+            <article class="article-card">
+                <h2>深入理解JavaScript原型链</h2>
+                <div class="article-meta">
+                    <span>2025-03-15</span> • 
+                    <span>前端开发</span> • 
+                    <span>阅读量 1520</span>
+                </div>
+                <p>原型链是JavaScript实现继承的核心机制，本文将详细解析原型对象、constructor属性以及原型继承的实际应用场景...</p>
+                <a href="#">阅读全文 →</a>
+            </article>
+
+            <article class="article-card">
+                <h2>响应式设计最佳实践</h2>
+                <div class="article-meta">
+                    <span>2025-03-14</span> • 
+                    <span>UI设计</span> • 
+                    <span>阅读量 980</span>
+                </div>
+                <p>在移动优先的时代，如何通过CSS Grid、Flexbox和媒体查询构建自适应的网页布局？本文将通过实际案例展示现代响应式设计的实现方案...</p>
+                <a href="#">阅读全文 →</a>
+            </article>
+        </main>
+
+        <!-- 侧边栏 -->
+        <aside class="sidebar">
+            <div class="author-card">
+                <img src="avatar.jpg" alt="作者头像" class="author-avatar">
+                <h3>技术探索者</h3>
+                <p>专注Web开发与前沿技术研究</p>
+                <div class="social-links">
+                    <a href="#">GitHub</a> | 
+                    <a href="#">Twitter</a>
+                </div>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>
